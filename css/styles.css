@@ -1,0 +1,94 @@
+/*
+marcia carol greg
+jan title peter
+cindy mike bobby      
+*/
+
+.grid {
+  display: grid;
+  max-width: 700px;
+  grid-template-areas:
+    "marcia carol greg"
+    "jan title peter"
+    "cindy mike bobby";
+  grid-gap: 10px;
+}
+
+.marcia {
+  grid-area: marcia;
+}
+
+.carol {
+  grid-area: carol;
+}
+
+.greg {
+  grid-area: greg;
+}
+
+.jan {
+  grid-area: jan;
+}
+
+.title {
+  grid-area: title;
+}
+
+.peter {
+  grid-area: peter;
+}
+
+.cindy {
+  grid-area: cindy;
+}
+
+.mike {
+  grid-area: mike;
+}
+
+.bobby {
+  grid-area: bobby;
+}
+
+.grid img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes scale_up {
+  to {
+    transform: scale(2.2);
+  }
+}
+
+@keyframes scale_up_mobile {
+  to {
+    transform: scale(0.8);
+  }
+}
+
+.title img {
+  transform: scale(0);
+  animation: 3s forwards 1s scale_up;
+}
+
+body {
+  background-color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-areas:
+      "title title"
+      "marcia carol"
+      "greg jan"
+      "peter cindy"
+      "mike bobby";
+  }
+
+  .title img {
+    animation: 3s forwards 1s scale_up_mobile;
+  }
+}
